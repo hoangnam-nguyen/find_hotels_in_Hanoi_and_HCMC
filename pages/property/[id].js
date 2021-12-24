@@ -40,7 +40,7 @@ const PropertyDetails = ({
         </Text>
         <ul>
           {propertyDescription.roomTypeNames.map((room) => (
-            <li>{room}</li>
+            <li key={index}>{room}</li>
           ))}
         </ul>
         <br />
@@ -49,7 +49,7 @@ const PropertyDetails = ({
         </Text>
         <ul>
           {hygieneAndCleanliness.healthAndSafetyMeasures.measures.map((measure) => (
-            <li>{measure}</li>
+            <li key={index}>{measure}</li>
           ))}
         </ul>
         <br />
@@ -58,7 +58,7 @@ const PropertyDetails = ({
         </Text>
         <ul>
           {atAGlance.keyFacts.hotelSize.map((item) => (
-            <li>{item}</li>
+            <li key={index}>{item}</li>
           ))}
         </ul>
         <br />
@@ -67,7 +67,7 @@ const PropertyDetails = ({
         </Text>
         <ul>
           {atAGlance.keyFacts.arrivingLeaving.map((item) => (
-            <li>{item}</li>
+            <li key={index}>{item}</li>
           ))}
         </ul>
         <br />
@@ -75,8 +75,8 @@ const PropertyDetails = ({
           Special Check-in Instructions:
         </Text>
         <ul>
-          {atAGlance.keyFacts.specialCheckInInstructions.map((item) => (
-            <li>{item}</li>
+          {atAGlance.keyFacts.specialCheckInInstructions.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
         <br />
@@ -84,8 +84,8 @@ const PropertyDetails = ({
           Required at Check-in:
         </Text>
         <ul>
-          {atAGlance.keyFacts.requiredAtCheckIn.map((item) => (
-            <li>{item}</li>
+          {atAGlance.keyFacts.requiredAtCheckIn.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </Flex>
