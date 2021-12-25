@@ -39,7 +39,7 @@ const PropertyDetails = ({
           Room Types:
         </Text>
         <ul>
-          {propertyDescription.roomTypeNames.map((room) => (
+          {propertyDescription.roomTypeNames.map((room, index) => (
             <li key={index}>{room}</li>
           ))}
         </ul>
@@ -48,7 +48,7 @@ const PropertyDetails = ({
           {hygieneAndCleanliness.title}:
         </Text>
         <ul>
-          {hygieneAndCleanliness.healthAndSafetyMeasures.measures.map((measure) => (
+          {hygieneAndCleanliness.healthAndSafetyMeasures.measures.map((measure, index) => (
             <li key={index}>{measure}</li>
           ))}
         </ul>
@@ -57,7 +57,7 @@ const PropertyDetails = ({
           Hotel Size:
         </Text>
         <ul>
-          {atAGlance.keyFacts.hotelSize.map((item) => (
+          {atAGlance.keyFacts.hotelSize.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
@@ -66,7 +66,7 @@ const PropertyDetails = ({
           Check In-Out:
         </Text>
         <ul>
-          {atAGlance.keyFacts.arrivingLeaving.map((item) => (
+          {atAGlance.keyFacts.arrivingLeaving.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>

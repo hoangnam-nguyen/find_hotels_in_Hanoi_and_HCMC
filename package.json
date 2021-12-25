@@ -1,6 +1,6 @@
 {
-  "name": "brave_new_coin",
-  "private": true,
+  "name": "hotel_in_hanoi_hcmc",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

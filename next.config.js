@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["exp.cdn-hotels.com"],
+    domains: ["hotels4.p.rapidapi.com"],
   },
 };
