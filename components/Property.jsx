@@ -7,27 +7,13 @@ import { GoVerified } from "react-icons/go";
 import millify from "millify";
 
 import defaultImage from "../images/defaultHotelImage.jpg";
-import { fetchApi } from "../utils/fetchApi";
 
-const Property = ({
-  property: {
-    id,
-    name,
-    starRating,
-    address,
-    guestReviews,
-    landmarks,
-    ratePlan,
-    neighbourhood,
-    coordinate,
-    optimizedThumbUrls,
-  },
-}) => (
+const Property = ({ property: { id, name, address, guestReviews, ratePlan, optimizedThumbUrls } }) => (
   <Link href={`/property/${id}`} passHref>
     <Flex flexWrap="wrap" w="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
       <Box>
         <Image
-          src={optimizedThumbUrls ? optimizedThumbUrls.srpDesktop : defaultImage}
+          src={optimizedThumbUrls.srpDesktop ? optimizedThumbUrls.srpDesktop : defaultImage}
           width={400}
           height={260}
           alt="hotel"
@@ -43,7 +29,9 @@ const Property = ({
               USD{millify(ratePlan.price.exactCurrent)}/person/night
             </Text>
           </Flex>
-          <Text fontWeight="bold" fontStyle="italic" fontSize="sm">Rating: {guestReviews?.rating}/10</Text>
+          <Text fontWeight="bold" fontStyle="italic" fontSize="sm">
+            Rating: {guestReviews?.rating}/10
+          </Text>
         </Flex>
         <Box p="1" w="full" color="blue.400">
           <Text fontWeight="bold">{name}</Text>
